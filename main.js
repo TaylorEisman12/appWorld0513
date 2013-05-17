@@ -88,6 +88,7 @@ $('#logOut').on('click', function(){
 $( '#remoteData' ).on('pageinit', function(){
 		$( '#jsonButton' ).on( 'click', function () {
 		$('#viewData').empty();
+		$('#testView').empty();
         $.ajax( {
             url: 'xhr/data.json',
             type: 'GET',
@@ -110,6 +111,7 @@ $( '#remoteData' ).on('pageinit', function(){
 
 	$( '#xmlButton' ).on( 'click', function() {
 		$('#viewData').empty();
+		$('#testView').empty();
 			$.ajax( {
 				url: 'xhr/data.xml',
 				type: 'GET',
@@ -134,6 +136,7 @@ $( '#remoteData' ).on('pageinit', function(){
 
 $( '#csvButton' ).on( 'click', function() {
 $('#viewData').empty();
+$('#testView').empty();
         $.ajax( {
             url: 'xhr/data.csv',
             type: 'GET',
@@ -147,20 +150,13 @@ $('#viewData').empty();
 			for (var lineNum = 1; lineNum < lines.length; lineNum++) {
 				var row = lines[lineNum];
 				var columns = row.split(",");
-				//console.log(columns);
-				$('<li><b>' + dataCol[0] + " " + columns[0] + '</b></li>' +
+					var thisButton = $("<a>").attr("href", "#").attr("data-role", "button").attr("data-theme", columns[1]).attr("data-icon", columns[2]).text(columns[0]);
+				thisButton.appendTo('#testView');
+				$('<ul>' + '<li><b>' + dataCol[0] + " " + columns[0] + '</b></li>' +
 					'<li>'+ dataCol[1] + " " + columns[1] + '</li>' +
-					'<li>'+ dataCol[2] + " " + columns[2] + '</li>' +
-					'<li>'+ dataCol[3] + " " + columns[3] + '</li>' +
-					'</ul>'
-				).appendTo('#viewData');
-				$("<a>").attr("href", "#")
-            		.attr("data-role", "button")
-            		.attr("data-theme", columns[1])
-            		.attr("data-icon", columns[2])
-            		.text(columns[0])
-           		 	.appendTo(".viewData");
-		} 
+					'<li>'+ dataCol[2] + " " + columns[2] + '</li>' + '</ul>'
+				).appendTo('#testView');
+		} 	
             }
         });
     });
