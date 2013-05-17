@@ -52,7 +52,7 @@ $('#main').on('pageinit', function(){
          i++
          if(i>=themeArray.length)
               i=0;
-         return $( "#buttonTheme" ).buttonMarkup({theme: themeArray[i] });;   
+         return $('#changeName').empty(), $('<span>Current Theme: "' + themeArray[i] + '"</span>').appendTo('#changeName'), $( "#buttonTheme" ).buttonMarkup({theme: themeArray[i] });
       })
 $('#buttonIcon').change(function() {
     var myswitch = $(this);
