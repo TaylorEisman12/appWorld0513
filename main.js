@@ -97,14 +97,9 @@ $( '#remoteData' ).on('pageinit', function(){
                 for ( var i = 0, len = result.buttons.length; i < len; i++ ) {
                     var item = result.buttons[i];
 	//console.log(item);
-                    $( ' ' +
-						'<div class="contentJSON">' +
-							'<ul>' +
-								'<li>' + '<b>' + item.buttonName[0] + " " + item.buttonName[1] + '</b>' + '</li>' +
+                    			$('<li>' + '<b>' + item.buttonName[0] + " " + item.buttonName[1] + '</b>' + '</li>' +
 								'<li>' + item.buttonTheme[0] + " " + item.buttonTheme[1] + '</li>' +
-								'<li>' + item.buttonIcon[0]	+ " " + item.buttonIcon[1] + '</li>' +
-							'</ul>' +
-						'</div>'
+								'<li>' + item.buttonIcon[0]	+ " " + item.buttonIcon[1] + '</li>'
 					).appendTo( '#viewData' );
 					
                 }
