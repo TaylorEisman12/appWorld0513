@@ -2,22 +2,22 @@
     "buttons" : [
     {
         "buttonName": ["Button Name:", "Add People"],
-        "buttonTheme": ["Button Theme:", "D"],
+        "buttonTheme": ["Button Theme:", "d"],
         "buttonIcon":	["Button Icon:", "No"]
     },
     {
         "buttonName": ["Button Name:", "Move to Trash"],
-        "buttonTheme": ["Button Theme:", "B"],
+        "buttonTheme": ["Button Theme:", "b"],
         "buttonIcon":	["Button Icon:", "delete"]
     },
     {
         "buttonName": ["Button Name:", "File"],
-        "buttonTheme": ["Button Theme:", "C"],
+        "buttonTheme": ["Button Theme:", "c"],
         "buttonIcon":	["Button Icon:", "grid"]
     },
     {
         "buttonName": ["Button Name:", "I am a Button"],
-        "buttonTheme": ["Button Theme:", "A"],
+        "buttonTheme": ["Button Theme:", "a"],
         "buttonIcon":	["Button Icon:", "No"]
     }
     ]

@@ -2,22 +2,22 @@
     <buttons>
         <item>
             <buttonName>Add to Cart</buttonName>
-            <buttonTheme>A</buttonTheme>
+            <buttonTheme>a</buttonTheme>
             <buttonIcon>No</buttonIcon>
         </item>
         <item>
             <buttonName>Store Login</buttonName>
-            <buttonTheme>B</buttonTheme>
+            <buttonTheme>c</buttonTheme>
             <buttonIcon>No</buttonIcon>
        </item>
        <item>
             <buttonName>Log Out</buttonName>
-            <buttonTheme>C</buttonTheme>
+            <buttonTheme>b</buttonTheme>
             <buttonIcon>delete</buttonIcon>
        </item>
        <item>
             <buttonName>Next Page</buttonName>
-            <buttonTheme>D</buttonTheme>
+            <buttonTheme>e</buttonTheme>
             <buttonIcon>rightArrow</buttonIcon>
        </item>
     </buttons>
