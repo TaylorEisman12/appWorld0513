@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+	<head>
+		<title>AppWorld</title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div data-role="page" id="login" >
+			<div data-role="header" class="headerChange" data-position="fixed">
+				<h1>Login / Register</h1>
+			</div>
+			<div data-role="content" id="loginContent">
+				<form id="signIn">
+     				<label for="username">Username:</label>
+     				<input data-clear-btn="true" name="username" id="username" placeholder="Please enter Username." type="text">
+					<label for="password">Password:</label>
+     				<input data-clear-btn="true" name="password" id="password" placeholder="Please enter Password." type="text">
+				</form>
+				<br />
+				<a href="#" id="loginButton" data-role="button">Login</a>
+				<a href="#" id="registrationButton" data-role="button">New User<a/>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h1>Bottom nav</h1>
+			</div>
+		</div> // LOGIN
+		
+		<div data-role="page" id="main">
+			<div data-role="header">
+    			<a href="#accountSettings" data-icon="gear">Settings</a>
+    			<h1>App World</h1>
+			</div>
+			<div data-role="content" class="main">
+				<form id="buttonInfo">
+					<label for="buttonName"><h3>Name of your button:</h3></label>
+					<input type="text" id="buttonName" name="buttonName" data-clear-btn="true" placeholder="Name your Button">
+					<span id="example">Example: Add to Cart</span><br />
+					<label for="appTheme"><h3>Select button theme:</h3></label>
+					<a href="#" id="appTheme" data-role="button">Click to change button theme</a>
+					<label for="buttonIcon"><h3>Button Icon</h3></label>
+						<select name="buttonIcon" id="buttonIcon" data-role="slider">
+   							 <option value="off">Off</option>
+   							 <option value="on">On</option>
+   						</select>
+   						<div id="selectedIcon">
+   						</div>
+   						<span id="iconExample">Toggle to see options</span>
+   						<div id="showIcons" class="hidden">
+                			<h3>Select Icon:</h3>
+                				<a href="#" data-role="button" data-icon="bars" onClick="reply_click(this.id)" data-iconpos="notext" id="bars" data-theme="c" data-inline="true">Bars</a>
+								<a href="#" data-role="button" data-icon="edit" onClick="reply_click(this.id)" data-iconpos="notext" id="edit" data-theme="c" data-inline="true">Edit</a>
+								<a href="#" data-role="button" data-icon="arrow-l" onClick="reply_click(this.id)" data-iconpos="notext" id="leftArrow" data-theme="c" data-inline="true">Arrow left</a>
+								<a href="#" data-role="button" data-icon="arrow-r" onClick="reply_click(this.id)" data-iconpos="notext" id="rightArrow" data-theme="c" data-inline="true">Arrow right</a>
+								<a href="#" data-role="button" data-icon="arrow-u" onClick="reply_click(this.id)" data-iconpos="notext" id="upArrow" data-theme="c" data-inline="true">Arrow up</a>
+								<a href="#" data-role="button" data-icon="arrow-d" onClick="reply_click(this.id)" data-iconpos="notext" id="downArrow" data-theme="c" data-inline="true">Arrow down</a>
+								<a href="#" data-role="button" data-icon="delete" onClick="reply_click(this.id)" data-iconpos="notext" id="delete" data-theme="c" data-inline="true">Delete</a>
+								<a href="#" data-role="button" data-icon="plus" onClick="reply_click(this.id)" data-iconpos="notext" id="plus" data-theme="c" data-inline="true">Plus</a>
+								<a href="#" data-role="button" data-icon="minus" onClick="reply_click(this.id)" data-iconpos="notext" id="minus" data-theme="c" data-inline="true">Minus</a>
+								<a href="#" data-role="button" data-icon="check" onClick="reply_click(this.id)" data-iconpos="notext" id="check" data-theme="c" data-inline="true">Check</a>
+								<a href="#" data-role="button" data-icon="gear" onClick="reply_click(this.id)" data-iconpos="notext" id="gear" data-theme="c" data-inline="true">Gear</a>
+								<a href="#" data-role="button" data-icon="refresh" onClick="reply_click(this.id)" data-iconpos="notext" id="refresh" data-theme="c" data-inline="true">Refresh</a>
+								<a href="#" data-role="button" data-icon="forward" onClick="reply_click(this.id)" data-iconpos="notext" id="forward" data-theme="c" data-inline="true">Forward</a>
+								<a href="#" data-role="button" data-icon="back" onClick="reply_click(this.id)" data-iconpos="notext" id="back" data-theme="c" data-inline="true">Back</a>
+								<a href="#" data-role="button" data-icon="grid" onClick="reply_click(this.id)" data-iconpos="notext" id="grid" data-theme="c" data-inline="true">Grid</a>
+								<a href="#" data-role="button" data-icon="alert" onClick="reply_click(this.id)" data-iconpos="notext" id="alert" data-theme="c" data-inline="true">Alert</a>
+								<a href="#" data-role="button" data-icon="info" onClick="reply_click(this.id)" data-iconpos="notext" id="info" data-theme="c" data-inline="true">Info</a>
+								<a href="#" data-role="button" data-icon="home" onClick="reply_click(this.id)" data-iconpos="notext" id="home" data-theme="c" data-inline="true">Home</a>
+								<a href="#" data-role="button" data-icon="search" onClick="reply_click(this.id)" data-iconpos="notext" id="search" data-theme="c" data-inline="true">Search</a>
+           	 			</div>
+           	 			<input type="submit" id="submit" data-theme="b" value="submit">
+           	 			<br />
+           	 			<a href="#buttonListPage" id="cancelButton">cancel</a>
+				</form>
+			</div>
+				<div data-role="footer" id="mainFooter" data-position="fixed">
+				<h1>Bottom nav</h1>
+			</div>
+		</div> // MAIN
+		
+		<div data-role="page" id="accountSettings" data-add-back-btn="true">
+			<div data-role="header">
+				<h1>Account Settings</h1>
+					<a href="#" data-icon="edit" class="ui-btn-right">Edit</a>
+			</div>
+			<div data-role="content">
+				<ul id="userData">
+				</ul>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h1>Bottom nav</h1>
+			</div>
+		</div> // ACCOUNT SETTINGS
+		
+		<div data-role="page" id="buttonListPage" class="index">
+			<div data-role="header" data-position="fixed">
+				<h1>App World</h1>
+				<a href="#" data-icon="minus" id="logOut" class="ui-btn-left">LogOut</a>
+			</div>
+			<div data-role="content">
+				<div id="createButtonLink">
+				</div>
+				<button id="createButton">Create New Button</button>
+				<br />
+				<ul data-role="listview" id="buttonList">
+				</ul>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<h1>App World</h1>
+			</div>
+		</div>
+		
+	</body>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<script src="main.js" type="text/javascript"></script>
+</html>
