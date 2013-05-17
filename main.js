@@ -148,18 +148,19 @@ $('#viewData').empty();
 				var row = lines[lineNum];
 				var columns = row.split(",");
 				//console.log(columns);
-			$(''+
-		'<div class="contentCSV">'+
-			'<ul>' +
-				'<li><b>' + dataCol[0] + " " + columns[0] + '</b></li>' +
-				'<li>'+ dataCol[1] + " " + columns[1] + '</li>' +
-				'<li>'+ dataCol[2] + " " + columns[2] + '</li>' +
-				'<li>'+ dataCol[3] + " " + columns[3] + '</li>' +
-			'</ul>' +
-		'</div>'
+				$('<li><b>' + dataCol[0] + " " + columns[0] + '</b></li>' +
+					'<li>'+ dataCol[1] + " " + columns[1] + '</li>' +
+					'<li>'+ dataCol[2] + " " + columns[2] + '</li>' +
+					'<li>'+ dataCol[3] + " " + columns[3] + '</li>' +
+					'</ul>'
 				).appendTo('#viewData');
-				
-		}
+				$("<a>").attr("href", "#")
+            		.attr("data-role", "button")
+            		.attr("data-theme", columns[1])
+            		.attr("data-icon", columns[2])
+            		.text(columns[0])
+           		 	.appendTo(".viewData");
+		} 
             }
         });
     });
