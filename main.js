@@ -94,15 +94,15 @@ $( '#remoteData' ).on('pageinit', function(){
             dataType: 'json',
             success:function ( result ) {
 	//console.log(result);
-                for ( var i = 0, len = result.armors.length; i < len; i++ ) {
-                    var item = result.armors[i];
-	console.log(item);
+                for ( var i = 0, len = result.buttons.length; i < len; i++ ) {
+                    var item = result.buttons[i];
+	//console.log(item);
                     $( ' ' +
 						'<div class="contentJSON">' +
 							'<ul>' +
-								'<li>' + '<b>' + item.armorName[0] + " " + item.armorName[1] + '</b>' + '</li>' +
-								'<li>' + item.selectColor[0] + " " + item.selectColor[1] + '</li>' +
-								'<li>' + item.repaired[0]	+ " " + item.repaired[1] + '</li>' +
+								'<li>' + '<b>' + item.buttonName[0] + " " + item.buttonName[1] + '</b>' + '</li>' +
+								'<li>' + item.buttonTheme[0] + " " + item.buttonTheme[1] + '</li>' +
+								'<li>' + item.buttonIcon[0]	+ " " + item.buttonIcon[1] + '</li>' +
 							'</ul>' +
 						'</div>'
 					).appendTo( '#viewData' );
@@ -122,15 +122,15 @@ $( '#remoteData' ).on('pageinit', function(){
 				success:function ( result ) {
 				//console.log(result);
 				$(result).find('item').each(function(){
-					var armorName = $(this).find('armorName').text();
-                    var selectColor = $(this).find('selectColor').text();
-                    var repaired = $(this).find('repaired').text();
+					var buttonName = $(this).find('buttonName').text();
+                    var buttonTheme = $(this).find('buttonTheme').text();
+                    var buttonIcon = $(this).find('buttonIcon').text();
                         $(' '+
                             '<div class="contentXML">' +
                                 '<ul>' +
-                                    '<li><b>Armor Name: ' + armorName + '</b></li>' +
-                                    '<li> Color: ' + selectColor + '</li>' +
-                                    '<li> Repaired: ' + repaired + '</li>' +
+                                    '<li><b>Button Name: ' + buttonName + '</b></li>' +
+                                    '<li> Button Theme: ' + buttonTheme + '</li>' +
+                                    '<li> Icon: ' + buttonIcon + '</li>' +
                                 '</ul>' +
                             '</div>'
 						).appendTo('#viewData');
