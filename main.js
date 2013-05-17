@@ -120,14 +120,9 @@ $( '#remoteData' ).on('pageinit', function(){
 					var buttonName = $(this).find('buttonName').text();
                     var buttonTheme = $(this).find('buttonTheme').text();
                     var buttonIcon = $(this).find('buttonIcon').text();
-                        $(' '+
-                            '<div class="contentXML">' +
-                                '<ul>' +
-                                    '<li><b>Button Name: ' + buttonName + '</b></li>' +
+                        			$('<li><b>Button Name: ' + buttonName + '</b></li>' +
                                     '<li> Button Theme: ' + buttonTheme + '</li>' +
-                                    '<li> Icon: ' + buttonIcon + '</li>' +
-                                '</ul>' +
-                            '</div>'
+                                    '<li> Icon: ' + buttonIcon + '</li>'
 						).appendTo('#viewData');
 						
 					});
