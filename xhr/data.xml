@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <buttons>
+        <item>
+            <buttonName>Add to Cart</buttonName>
+            <buttonTheme>A</buttonTheme>
+            <buttonIcon>No</buttonIcon>
+        </item>
+        <item>
+            <buttonName>Store Login</buttonName>
+            <buttonTheme>B</buttonTheme>
+            <buttonIcon>No</buttonIcon>
+       </item>
+       <item>
+            <buttonName>Log Out</buttonName>
+            <buttonTheme>C</buttonTheme>
+            <buttonIcon>delete</buttonIcon>
+       </item>
+       <item>
+            <buttonName>Next Page</buttonName>
+            <buttonTheme>D</buttonTheme>
+            <buttonIcon>rightArrow</buttonIcon>
+       </item>
+    </buttons>

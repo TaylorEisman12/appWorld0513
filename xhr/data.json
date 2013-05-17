@@ -1,0 +1,24 @@
+{
+    "buttons" : [
+    {
+        "buttonName": ["Button Name:", "Add People"],
+        "buttonTheme": ["Button Theme:", "D"],
+        "buttonIcon":	["Button Icon:", "No"]
+    },
+    {
+        "buttonName": ["Button Name:", "Move to Trash"],
+        "buttonTheme": ["Button Theme:", "B"],
+        "buttonIcon":	["Button Icon:", "delete"]
+    },
+    {
+        "buttonName": ["Button Name:", "File"],
+        "buttonTheme": ["Button Theme:", "C"],
+        "buttonIcon":	["Button Icon:", "grid"]
+    },
+    {
+        "buttonName": ["Button Name:", "I am a Button"],
+        "buttonTheme": ["Button Theme:", "A"],
+        "buttonIcon":	["Button Icon:", "No"]
+    }
+    ]
+}
