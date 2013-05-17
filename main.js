@@ -48,11 +48,11 @@ $('#main').on('pageinit', function(){
 	var themeArray = ['a','b','c','d','e'];
 	var i = 0;
 
-		$('#appTheme').click(function(){
+		$('#buttonTheme').click(function(){
          i++
          if(i>=themeArray.length)
               i=0;
-         return $( "#appTheme" ).buttonMarkup({theme: themeArray[i] });;   
+         return $( "#buttonTheme" ).buttonMarkup({theme: themeArray[i] });;   
       })
 $('#buttonIcon').change(function() {
     var myswitch = $(this);
